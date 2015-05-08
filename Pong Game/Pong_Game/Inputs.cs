@@ -24,6 +24,7 @@ namespace Pong_Game
             oldPad2State = GamePad.GetState(PlayerIndex.Two);
         }
 
+        // Checks all user inputs
         public void CheckInputs(bool p1Power, bool p2Power)
         {
             // Get new state of keyboard
@@ -45,11 +46,25 @@ namespace Pong_Game
             }
             if ((newState.IsKeyDown(Keys.A) && !oldState.IsKeyDown(Keys.A)) || (newPad1State.IsButtonDown(Buttons.LeftTrigger) && !oldPad1State.IsButtonDown(Buttons.LeftTrigger)))
             {
-                player1.spinHigh();
+                if(player1.spin < 0)
+                {
+                    player1.ResetSpin();
+                }
+                else
+                {
+                    player1.SpinHigh();
+                }                
             }
             if ((newState.IsKeyDown(Keys.D) && !oldState.IsKeyDown(Keys.D)) || (newPad1State.IsButtonDown(Buttons.RightTrigger) && !oldPad1State.IsButtonDown(Buttons.RightTrigger)))
             {
-                player1.spinLow();
+                if (player1.spin > 0)
+                {
+                    player1.ResetSpin();
+                }
+                else
+                {
+                    player1.SpinLow();
+                }                
             }
             if ((newState.IsKeyDown(Keys.LeftControl) && !oldState.IsKeyDown(Keys.LeftControl)) || (newPad1State.IsButtonDown(Buttons.A) && !oldPad1State.IsButtonDown(Buttons.A)))
             {
@@ -74,11 +89,25 @@ namespace Pong_Game
             }
             if ((newState.IsKeyDown(Keys.Left) && !oldState.IsKeyDown(Keys.Left)) || (newPad2State.IsButtonDown(Buttons.LeftTrigger) && !oldPad2State.IsButtonDown(Buttons.LeftTrigger)))
             {
-                player2.spinLow();
+                if (player2.spin > 0)
+                {
+                    player1.ResetSpin();
+                }
+                else
+                {
+                    player2.SpinLow();
+                }             
             }
             if ((newState.IsKeyDown(Keys.Right) && !oldState.IsKeyDown(Keys.Right)) || (newPad2State.IsButtonDown(Buttons.RightTrigger) && !oldPad2State.IsButtonDown(Buttons.RightTrigger)))
             {
-                player2.spinHigh();
+                if (player2.spin < 0)
+                {
+                    player1.ResetSpin();
+                }
+                else
+                {
+                    player2.SpinHigh();
+                }          
             }
             if ((newState.IsKeyDown(Keys.RightControl) && !oldState.IsKeyDown(Keys.RightControl)) || (newPad2State.IsButtonDown(Buttons.A) && !oldPad2State.IsButtonDown(Buttons.A)))
             {

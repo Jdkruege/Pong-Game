@@ -35,6 +35,8 @@ namespace Pong_Game
 
         Random rand;
 
+        int serveDir = 1;
+
         double matchTime = 0;
         bool gameStarted = false;
         bool gameWon = false;
@@ -53,8 +55,6 @@ namespace Pong_Game
         /// </summary>
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-
             base.Initialize();
 
             this.Window.Title = "Tennis Aces";
@@ -75,7 +75,7 @@ namespace Pong_Game
             graphics.PreferredBackBufferHeight = 480;
             graphics.ApplyChanges();
 
-            // TODO: use this.Content to load your game content here
+            // Everything gets loaded here
             background = new Background(this, this.Content.Load<Texture2D>("Tennis Court"), this.Content.Load<Texture2D>("Bleachers"));
             boards = new Boards(this, this.Content.Load<Texture2D>("Scoreboard"), this.Content.Load<Texture2D>("Infoboard"));
             
@@ -128,7 +128,7 @@ namespace Pong_Game
             if(matchTime > 5 && !gameStarted && !gameWon)
             {
                 ball.yVel = rand.NextDouble() + .15;
-                ball.xVel = rand.Next(0, 1) - .5;
+                ball.xVel = rand.Next(2,4) * serveDir;
 
                 powerUp.x = rand.Next(160, 520);
                 powerUp.y = rand.Next(120, 360);
@@ -152,6 +152,8 @@ namespace Pong_Game
 
                 info.StopWind();
 
+                serveDir = 1;
+
                 if(info.p1Score == info.goal)
                 {
                     gameWon = true;
@@ -172,6 +174,8 @@ namespace Pong_Game
                 ball.xVel = 0;
 
                 info.StopWind();
+
+                serveDir = -1;
 
                 if (info.p2Score == info.goal)
                 {
@@ -215,6 +219,7 @@ namespace Pong_Game
 
             spriteBatch.Begin();
 
+            // Draw everything
             background.Draw();
             boards.Draw();
 

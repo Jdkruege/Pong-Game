@@ -1,0 +1,20 @@
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\Player Images\Yellow Racket.xnb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\Tennis Ball.xnb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\Tennis Court.xnb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\Player Images\Blue Racket.xnb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\Scoreboard.xnb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\Infoboard.xnb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\Icon.xnb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\Bleachers.xnb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\Wind Direction.xnb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\Highlight.xnb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\fireball.xnb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\Basic.xnb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\Hit.xnb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\Serve.xnb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\Background.xnb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Pong_Game.exe
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Pong_Game.pdb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\obj\x86\Release\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\obj\x86\Release\Pong_Game.exe
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\obj\x86\Release\Pong_Game.pdb

@@ -38,6 +38,7 @@ namespace Pong_Game
             this.game = game;
         }
 
+        // Starts the wind going either north or south
         public void StartWind(int direction)
         {
             switch(direction)
@@ -54,6 +55,7 @@ namespace Pong_Game
             }
         }
 
+        // Slowly modifies the wind direction
         public void ChangeWind()
         {
             int magnitude = rand.Next(-100, 100);
@@ -70,6 +72,7 @@ namespace Pong_Game
             }
         }
 
+        // Stops wind for any user of the class
         public void StopWind()
         {
             windAngle = -180;

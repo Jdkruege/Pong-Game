@@ -30,6 +30,7 @@ namespace Pong_Game
             Rectangle p2Rect = player2.CreateRectangle();
             Rectangle powerUpRect = power.CreateRectangle(); 
 
+            // Bounce of a barrier if it hits one
             if (ballRect.Intersects(topBarrier))
             {
                 ball.y = topBarrier.Bottom + 10;
@@ -48,13 +49,14 @@ namespace Pong_Game
 
                 return;
             }
+            // React if the ball intersects with player 1
             else if(ballRect.Intersects(p1Rect))
             {
                 ball.x = p1Rect.Right + 10;
 
                 ball.lastVolley = 1;
 
-                if (info.p1Power)
+                if (player1.powered)
                 {
                     ball.PowerShot();
                     info.p1Power = false;
@@ -72,13 +74,15 @@ namespace Pong_Game
                 return;
 
             }
+
+            // React if the ball intersects with player 2
             else if (ballRect.Intersects(p2Rect))
             {
                 ball.x = p2Rect.Left - 10;
 
                 ball.lastVolley = 2;
 
-                if (info.p2Power)
+                if (player2.powered)
                 {
                     ball.PowerShot();
                     info.p2Power = false;
@@ -97,6 +101,8 @@ namespace Pong_Game
                 hit.Play();
                 return;
             }
+
+            // If the ball hits a powerup give the power to the last player that hit the ball
             else if(ballRect.Intersects(powerUpRect))
             {
                 if(ball.lastVolley == 1)

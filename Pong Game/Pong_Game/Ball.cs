@@ -20,7 +20,8 @@ namespace Pong_Game
         private float angle;
         private CollisionDetection collider;
 
-        private const double MAX_SPEED = 10;
+        private const double MAX_SPEED = 15;
+        private const double POWER_SPEED = 10;
 
         public int spin = 0;
         public int lastVolley;
@@ -49,11 +50,13 @@ namespace Pong_Game
             spriteBatch.Draw(myImage, new Vector2((int)x, (int)y), null, Color.White, angle, new Vector2(1000, 1000), .01f, SpriteEffects.None, 0);
         }
 
+        // Produce a collider for the rectangle
         public Rectangle CreateRectangle()
         {
             return new Rectangle((int)x - 10, (int)y - 10, 20, 20);
         }
 
+        // Apply wind on the ball
         public void ApplyWind(float windAngle)
         {
             if (windAngle < 0) return;
@@ -99,11 +102,13 @@ namespace Pong_Game
             return 0;
         }
 
+        // Apply spin on the ball
         public void ApplySpin(int spinType)
         {
             spin = spinType;
         }
 
+        // Bounce a ball on a wall
         public void Bounce()
         {
             yVel *= (-1 + .5 * spin);
@@ -112,6 +117,7 @@ namespace Pong_Game
             spin = 0;         
         }
 
+        // Volley a ball on a players racket
         public void Volley(double yVelocity)
         {
             xVel *= -1.1;
@@ -124,16 +130,17 @@ namespace Pong_Game
             yVel = yVelocity;
         }
 
+        // Change balls speed if a powershot was hit
         public void PowerShot()
         {
             yVel = 0;
             if(xVel > 0)
             {
-                xVel = MAX_SPEED * -1;
+                xVel = POWER_SPEED * -1;
             }
             else 
             {
-                xVel = MAX_SPEED;
+                xVel = POWER_SPEED;
             }
         }
     }

@@ -24,12 +24,14 @@ namespace Pong_Game
             y = -100;
         }
 
+        // Moves the object off the screen when it is hit 
         public void CollidedWith()
         {
             x = -100;
             y = -100;
         }
 
+        // Creates a rectangle in the powerup location for collisions
         public Rectangle CreateRectangle()
         {
             return new Rectangle((int)(x - 12.5), (int)(y - 12.5), 25, 25);

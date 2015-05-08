@@ -30,6 +30,7 @@ namespace Pong_Game
             this.game = game;
         }
 
+        // Player movement
         public void Move(int deltaY)
         {
            if(y + deltaY > lowestPoint)
@@ -44,14 +45,22 @@ namespace Pong_Game
            y += deltaY;
         }
 
-        public void spinLow()
+        // Apply a low spin on next ball hit
+        public void SpinLow()
         {
             spin = 1;
         }
 
-        public void spinHigh()
+        // Apply a high spin on the next ball
+        public void SpinHigh()
         {
             spin = -1;
+        }
+
+        // Reset this spin
+        public void ResetSpin()
+        {
+            spin = 0;
         }
 
         public void Draw()
@@ -61,6 +70,7 @@ namespace Pong_Game
             spriteBatch.Draw(myImage, new Vector2(x, y + 45), null, Color.White, 0f, new Vector2(20, 550), .15f, SpriteEffects.None, 0);
         }
 
+        // Produce this players hit box
         public Rectangle CreateRectangle()
         {
             return new Rectangle((int)x - 3, (int)(y - 37.5), 6, 90);            

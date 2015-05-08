@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>Player Images\Yellow Racket.png</Source>
+      <Name>Player Images\Yellow Racket</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\Player Images\Yellow Racket.xnb</Output>
+      <Time>2015-05-07T16:09:25.1453772-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Tennis Ball.png</Source>
+      <Name>Tennis Ball</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\Tennis Ball.xnb</Output>
+      <Time>2015-05-07T16:09:25.1803792-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Tennis Court.jpg</Source>
+      <Name>Tennis Court</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\Tennis Court.xnb</Output>
+      <Time>2015-05-07T16:09:25.1843795-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Player Images\Blue Racket.png</Source>
+      <Name>Player Images\Blue Racket</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\Player Images\Blue Racket.xnb</Output>
+      <Time>2015-05-07T16:09:25.1443772-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Scoreboard.png</Source>
+      <Name>Scoreboard</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\Scoreboard.xnb</Output>
+      <Time>2015-05-07T16:09:25.1483774-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Infoboard.png</Source>
+      <Name>Infoboard</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\Infoboard.xnb</Output>
+      <Time>2015-05-07T16:09:25.1433771-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Icon.png</Source>
+      <Name>Icon</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\Icon.xnb</Output>
+      <Time>2015-05-07T16:09:25.1433771-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Bleachers.png</Source>
+      <Name>Bleachers</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\Bleachers.xnb</Output>
+      <Time>2015-05-07T16:09:25.1393769-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Wind Direction.png</Source>
+      <Name>Wind Direction</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\Wind Direction.xnb</Output>
+      <Time>2015-05-07T16:09:25.1853795-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Highlight.png</Source>
+      <Name>Highlight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\Highlight.xnb</Output>
+      <Time>2015-05-07T22:56:45.9241344-05:00</Time>
+    </Item>
+    <Item>
+      <Source>fireball.png</Source>
+      <Name>fireball</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\fireball.xnb</Output>
+      <Time>2015-05-07T23:15:22.7250118-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Basic.spritefont</Source>
+      <Name>Basic</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\Basic.xnb</Output>
+      <Time>2015-05-07T16:09:25.1283763-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Hit.wav</Source>
+      <Name>Hit</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\Hit.xnb</Output>
+      <Time>2015-05-07T16:09:25.1423771-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Serve.wav</Source>
+      <Name>Serve</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\Serve.xnb</Output>
+      <Time>2015-05-07T16:09:25.1513776-05:00</Time>
+    </Item>
+    <Item>
+      <Source>Background.wav</Source>
+      <Name>Background</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\Background.xnb</Output>
+      <Time>2015-05-07T16:09:25.1253761-05:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{952D99DC-D558-4CAA-B4D4-C7838CA00EB0}</ContentProjectGUID>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Release</BuildConfiguration>
+      <CompressContent>true</CompressContent>
+      <RootDirectory>C:\Video Game Workspace\Pong-Game\Pong Game\Pong_GameContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\obj\x86\Release\</IntermediateDirectory>
+      <OutputDirectory>C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Release\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2011-09-01T17:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2011-09-01T17:22:30-05:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2015-01-25T09:32:06.698115-06:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>
