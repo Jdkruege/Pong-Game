@@ -1,3 +1,4 @@
 E:\Projects\Pong Game\Pong Game\Pong_GameContent\obj\x86\Debug\Pong_GameContent.contentprojResolveAssemblyReference.cache
 C:\Users\Jonat_000\Desktop\Pong Game\Pong Game\Pong_GameContent\obj\x86\Debug\Pong_GameContent.contentprojResolveAssemblyReference.cache
 C:\Users\Jonathan Krueger\Desktop\Pong Game\Pong Game\Pong_GameContent\obj\x86\Debug\Pong_GameContent.contentprojResolveAssemblyReference.cache
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_GameContent\obj\x86\Debug\Pong_GameContent.contentprojResolveAssemblyReference.cache

@@ -28,6 +28,7 @@ namespace Pong_Game
         Boards boards;
         Info info;
         Powerup powerUp;
+        Texture2D highlight;
 
         SoundEffect serve;
         SoundEffectInstance backgroundMusic;
@@ -81,8 +82,10 @@ namespace Pong_Game
             player1 = new Player(this, 25, 240, this.Content.Load<Texture2D>("Player Images/Blue Racket"));
             player2 = new Player(this, 615, 240, this.Content.Load<Texture2D>("Player Images/Yellow Racket"));
             ball = new Ball(this, 320, 240, this.Content.Load<Texture2D>("Tennis Ball"));
-            info = new Info(this, this.Content.Load<Texture2D>("Wind Direction"), 7, this.Content.Load<SpriteFont>("Basic"));
-            powerUp = new Powerup(this, this.Content.Load<Texture2D>("Wind Direction"));
+            info = new Info(this, this.Content.Load<Texture2D>("Wind Direction"), this.Content.Load<Texture2D>("fireball"), 7, this.Content.Load<SpriteFont>("Basic"));
+            powerUp = new Powerup(this, this.Content.Load<Texture2D>("fireball"));
+
+            highlight = this.Content.Load<Texture2D>("Highlight");
             
             inputs = new Inputs(player1, player2);
 
@@ -116,11 +119,12 @@ namespace Pong_Game
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            // TODO: Add your update logic here
-            inputs.CheckInputs();
+            //Checks inputs from user
+            inputs.CheckInputs(info.p1Power, info.p2Power);
             
             int winner = ball.Update(gameTime, player1, player2);
 
+            // Tosses the ball after 5 seconds
             if(matchTime > 5 && !gameStarted && !gameWon)
             {
                 ball.yVel = rand.NextDouble() + .15;
@@ -129,13 +133,14 @@ namespace Pong_Game
                 powerUp.x = rand.Next(160, 520);
                 powerUp.y = rand.Next(120, 360);
 
-                ChooseWind();
+                info.StartWind(rand.Next(0, 1));
 
                 serve.Play();
 
                 gameStarted = true;
             }
 
+            // Determines if either player has won the current point in the last update
             if(winner == 1)
             {
                 info.p1Score++;
@@ -144,7 +149,8 @@ namespace Pong_Game
                 ball.y = 240;
                 ball.xVel = 0;
                 ball.yVel = 0;
-                info.ChangeWind("None");
+
+                info.StopWind();
 
                 if(info.p1Score == info.goal)
                 {
@@ -164,7 +170,8 @@ namespace Pong_Game
                 ball.y = 240;
                 ball.yVel = 0;
                 ball.xVel = 0;
-                info.ChangeWind("None");
+
+                info.StopWind();
 
                 if (info.p2Score == info.goal)
                 {
@@ -177,10 +184,17 @@ namespace Pong_Game
                 }
             }
 
-            ball.ApplyWind(info.windAngle);
+            // If the game is in progress we need to adjust wind and apply the wind to the balls movement
+            if(gameStarted)
+            {
+                info.ChangeWind();
+                ball.ApplyWind(info.windAngle);
+            }            
 
+            // Track time of current match
             matchTime += gameTime.ElapsedGameTime.TotalSeconds;
 
+            // Provides some dramatic sounding background music
             if(backgroundMusic.State == SoundState.Stopped || backgroundMusic.State == SoundState.Paused)
             {
                 backgroundMusic.IsLooped = true;
@@ -199,12 +213,21 @@ namespace Pong_Game
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
-
             spriteBatch.Begin();
 
             background.Draw();
             boards.Draw();
+
+            // Draw highlights if players have power-hit triggered
+            if(player1.powered)
+            {
+                spriteBatch.Draw(highlight, new Vector2(25, 455), null, Color.White, 0f, new Vector2(25, 25), 0.6f, SpriteEffects.None, 0);
+            }
+            if(player2.powered)
+            {
+                spriteBatch.Draw(highlight, new Vector2(615, 455), null, Color.White, 0f, new Vector2(25, 25), 0.6f, SpriteEffects.None, 0);
+            }
+
             info.Draw();
 
             player1.Draw();
@@ -216,37 +239,6 @@ namespace Pong_Game
             spriteBatch.End();
 
             base.Draw(gameTime);
-        }
-
-        private void ChooseWind()
-        {
-            switch(rand.Next(0,7))
-            {
-                case 0:
-                    info.ChangeWind("N");
-                    break;
-                case 1:
-                    info.ChangeWind("E");
-                    break;
-                case 2:
-                    info.ChangeWind("S");
-                    break;
-                case 3:
-                    info.ChangeWind("W");
-                    break;
-                case 4:
-                    info.ChangeWind("NE");
-                    break;
-                case 5:
-                    info.ChangeWind("SE");
-                    break;
-                case 6:
-                    info.ChangeWind("SW");
-                    break;
-                case 7:
-                    info.ChangeWind("NW");
-                    break;
-            }
         }
     }
 }

@@ -54,11 +54,11 @@ namespace Pong_Game
             return new Rectangle((int)x - 10, (int)y - 10, 20, 20);
         }
 
-        public void ApplyWind(int windAngle)
+        public void ApplyWind(float windAngle)
         {
             if (windAngle < 0) return;
             yVel += Math.Cos(MathHelper.ToRadians(windAngle)) * -.0075;
-            xVel += Math.Sin(MathHelper.ToRadians(windAngle)) * .0075;
+            xVel += Math.Sin(MathHelper.ToRadians(windAngle)) * .0005;
         }
 
         public int Update(GameTime gameTime, Player player1, Player player2)

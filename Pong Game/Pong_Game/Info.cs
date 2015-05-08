@@ -16,54 +16,63 @@ namespace Pong_Game
         public Texture2D powerUpImage;
         public SpriteFont font;
 
-        public int windAngle;
+        public float windAngle;
+        public double windDelta = 0.025;
+
+        private Random rand;
 
         private Game game;
 
-        public Info(Game game,Texture2D arrow, int goal, SpriteFont font)
+        public Info(Game game,Texture2D arrow, Texture2D power, int goal, SpriteFont font)
         {
             this.goal = goal;
             this.font = font;
             arrowImage = arrow;
+            powerUpImage = power;
             p1Score = 0;
             p2Score = 0;
             windAngle = -180;
 
+            rand = new Random(System.DateTime.Now.Millisecond + System.DateTime.Now.Second + System.DateTime.Now.Minute + System.DateTime.Now.Hour + System.DateTime.Now.Day + System.DateTime.Now.Month + System.DateTime.Now.Year); ;
+
             this.game = game;
         }
 
-        public void ChangeWind(String direction)
+        public void StartWind(int direction)
         {
             switch(direction)
             {
-                case "N":
+                case 0:
                     windAngle = 0;
                     break;
-                case "E":
-                    windAngle = 90;
-                    break;
-                case "S":
+                case 1:
                     windAngle = 180;
                     break;
-                case "W":
-                    windAngle = 270;
-                    break;
-                case "NE":
-                    windAngle = 45;
-                    break;
-                case "SE":
-                    windAngle = 135;
-                    break;
-                case "SW":
-                    windAngle = 225;
-                    break;
-                case "NW":
-                    windAngle = 315;
-                    break;
-                case "None":
+                default:
                     windAngle = -180;
                     break;
             }
+        }
+
+        public void ChangeWind()
+        {
+            int magnitude = rand.Next(-100, 100);
+
+            windAngle += (float)(magnitude * windDelta);
+
+            if(windAngle < 0)
+            {
+                windAngle += 360;
+            }
+            else if(windAngle > 360)
+            {
+                windAngle -= 360;
+            }
+        }
+
+        public void StopWind()
+        {
+            windAngle = -180;
         }
 
         public void Draw()
@@ -77,11 +86,11 @@ namespace Pong_Game
 
             if(p1Power)
             {
-                spriteBatch.Draw(arrowImage, new Vector2(25, 455), null, Color.White, 0f, new Vector2(25, 25), 0.5f, SpriteEffects.None, 0);
+                spriteBatch.Draw(powerUpImage, new Vector2(25, 455), null, Color.White, 0f, new Vector2(25, 25), 0.5f, SpriteEffects.None, 0);
             }
             if (p2Power)
             {
-                spriteBatch.Draw(arrowImage, new Vector2(615, 455), null, Color.White, 0f, new Vector2(25, 25), 0.5f, SpriteEffects.None, 0);
+                spriteBatch.Draw(powerUpImage, new Vector2(615, 455), null, Color.White, 0f, new Vector2(25, 25), 0.5f, SpriteEffects.None, 0);
             }
 
         }

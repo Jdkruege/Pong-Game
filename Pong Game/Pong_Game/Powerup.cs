@@ -19,12 +19,15 @@ namespace Pong_Game
         {
             myImage = image;
             this.game = game;
+
+            x = -100;
+            y = -100;
         }
 
         public void CollidedWith()
         {
-            x = -30;
-            y = -30;
+            x = -100;
+            y = -100;
         }
 
         public Rectangle CreateRectangle()

@@ -8,6 +8,8 @@ Content\Icon.xnb
 Content\Bleachers.xnb
 Content\Wind Direction.xnb
 Content\Basic.xnb
-Content\Serve.xnb
 Content\Hit.xnb
+Content\Serve.xnb
 Content\Background.xnb
+Content\Highlight.xnb
+Content\fireball.xnb

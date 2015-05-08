@@ -11,63 +11,88 @@ namespace Pong_Game
     {
         private Player player1, player2;
         private const int speed = 5;
+        private KeyboardState oldState;
+        private GamePadState oldPad1State, oldPad2State;
 
         public Inputs(Player p1, Player p2)
         {
             player1 = p1;
             player2 = p2;
+
+            oldState = Keyboard.GetState();
+            oldPad1State = GamePad.GetState(PlayerIndex.One);
+            oldPad2State = GamePad.GetState(PlayerIndex.Two);
         }
 
-        public void CheckInputs()
+        public void CheckInputs(bool p1Power, bool p2Power)
         {
-            KeyboardState state = Keyboard.GetState();
-            GamePadState pad1State = GamePad.GetState(PlayerIndex.One);
-            GamePadState pad2State = GamePad.GetState(PlayerIndex.Two);
+            // Get new state of keyboard
+            KeyboardState newState = Keyboard.GetState();
+            GamePadState newPad1State = GamePad.GetState(PlayerIndex.One);
+            GamePadState newPad2State = GamePad.GetState(PlayerIndex.Two);
 
-            if(state.IsKeyDown(Keys.W) || pad1State.IsButtonDown(Buttons.DPadUp))
+
+            /*
+             * Player 1's Inputs
+             */
+            if(newState.IsKeyDown(Keys.W) || newPad1State.IsButtonDown(Buttons.DPadUp))
             {
                 player1.Move(-1 * speed);
             }
-            if (state.IsKeyDown(Keys.S) || pad1State.IsButtonDown(Buttons.DPadDown))
+            if (newState.IsKeyDown(Keys.S) || newPad1State.IsButtonDown(Buttons.DPadDown))
             {
                 player1.Move(speed);
             }
-            if (state.IsKeyDown(Keys.A) || pad1State.IsButtonDown(Buttons.LeftTrigger))
+            if ((newState.IsKeyDown(Keys.A) && !oldState.IsKeyDown(Keys.A)) || (newPad1State.IsButtonDown(Buttons.LeftTrigger) && !oldPad1State.IsButtonDown(Buttons.LeftTrigger)))
             {
                 player1.spinHigh();
             }
-            if (state.IsKeyDown(Keys.D) || pad1State.IsButtonDown(Buttons.RightTrigger))
+            if ((newState.IsKeyDown(Keys.D) && !oldState.IsKeyDown(Keys.D)) || (newPad1State.IsButtonDown(Buttons.RightTrigger) && !oldPad1State.IsButtonDown(Buttons.RightTrigger)))
             {
                 player1.spinLow();
             }
-            if (state.IsKeyDown(Keys.LeftControl) || pad1State.IsButtonDown(Buttons.X))
+            if ((newState.IsKeyDown(Keys.LeftControl) && !oldState.IsKeyDown(Keys.LeftControl)) || (newPad1State.IsButtonDown(Buttons.A) && !oldPad1State.IsButtonDown(Buttons.A)))
             {
-                player1.powered = true;
+                if(p1Power)
+                {
+                    player1.powered = !player1.powered;
+                }
+       
             }
 
 
-
-            if (state.IsKeyDown(Keys.Up) || pad2State.IsButtonDown(Buttons.DPadUp))
+            /*
+             * Player 2's Inputs
+             */
+            if (newState.IsKeyDown(Keys.Up) || newPad2State.IsButtonDown(Buttons.DPadUp))
             {
                 player2.Move(-1 * speed);
             }
-            if (state.IsKeyDown(Keys.Down) || pad2State.IsButtonDown(Buttons.DPadDown))
+            if (newState.IsKeyDown(Keys.Down) || newPad2State.IsButtonDown(Buttons.DPadDown))
             {
                 player2.Move(speed);
             }
-            if (state.IsKeyDown(Keys.Left) || pad2State.IsButtonDown(Buttons.LeftTrigger))
+            if ((newState.IsKeyDown(Keys.Left) && !oldState.IsKeyDown(Keys.Left)) || (newPad2State.IsButtonDown(Buttons.LeftTrigger) && !oldPad2State.IsButtonDown(Buttons.LeftTrigger)))
             {
                 player2.spinLow();
             }
-            if (state.IsKeyDown(Keys.Right) || pad2State.IsButtonDown(Buttons.RightTrigger))
+            if ((newState.IsKeyDown(Keys.Right) && !oldState.IsKeyDown(Keys.Right)) || (newPad2State.IsButtonDown(Buttons.RightTrigger) && !oldPad2State.IsButtonDown(Buttons.RightTrigger)))
             {
                 player2.spinHigh();
             }
-            if (state.IsKeyDown(Keys.RightControl) || pad2State.IsButtonDown(Buttons.X))
+            if ((newState.IsKeyDown(Keys.RightControl) && !oldState.IsKeyDown(Keys.RightControl)) || (newPad2State.IsButtonDown(Buttons.A) && !oldPad2State.IsButtonDown(Buttons.A)))
             {
-                player2.powered = true;
+                if (p2Power)
+                {
+                    player2.powered = !player2.powered;
+                }
             }
 
+
+            // New state becomes the old state
+            oldState = newState;
+            oldPad1State = newPad1State;
+            oldPad2State = newPad2State;
         }
     }
 }

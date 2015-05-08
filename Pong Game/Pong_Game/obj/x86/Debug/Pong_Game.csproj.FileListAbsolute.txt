@@ -47,3 +47,24 @@ C:\Users\Jonat_000\Desktop\Pong Game\Pong Game\Pong_Game\bin\x86\Debug\Content\B
 C:\Users\Jonathan Krueger\Desktop\Pong Game\Pong Game\Pong_Game\bin\x86\Debug\Content\Serve.xnb
 C:\Users\Jonathan Krueger\Desktop\Pong Game\Pong Game\Pong_Game\bin\x86\Debug\Content\Hit.xnb
 C:\Users\Jonathan Krueger\Desktop\Pong Game\Pong Game\Pong_Game\bin\x86\Debug\Content\Background.xnb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Debug\Content\Player Images\Yellow Racket.xnb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Debug\Content\Tennis Ball.xnb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Debug\Content\Tennis Court.xnb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Debug\Content\Player Images\Blue Racket.xnb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Debug\Content\Scoreboard.xnb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Debug\Content\Infoboard.xnb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Debug\Content\Icon.xnb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Debug\Content\Bleachers.xnb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Debug\Content\Wind Direction.xnb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Debug\Content\Basic.xnb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Debug\Content\Hit.xnb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Debug\Content\Serve.xnb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Debug\Content\Background.xnb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Debug\Pong_Game.exe
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Debug\Pong_Game.pdb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\obj\x86\Debug\Pong_Game.csprojResolveAssemblyReference.cache
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\obj\x86\Debug\Pong_Game.exe
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\obj\x86\Debug\Pong_Game.pdb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Debug\Content\Highlight.xnb
+C:\Video Game Workspace\Pong-Game\Pong Game\Pong_Game\bin\x86\Debug\Content\fireball.xnb
